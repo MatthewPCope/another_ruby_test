@@ -12,6 +12,12 @@ Rails.application.routes.draw do
 
   delete "logout", to: "sessions#destroy"
 
+  get "password/reset", to: "password_resets#new"
+  post "password/reset", to: "password_resets#create"
+
+  get "password/reset/edit", to: "password_resets#edit"
+  patch "password/rese/edit", to: "password_resets#update"
+
   get "up" => "rails/health#show", as: :rails_health_check
 
 
